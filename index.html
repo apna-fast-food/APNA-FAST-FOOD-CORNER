@@ -2,96 +2,78 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>APNA FAST FOOD CORNER</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- CSS -->
+  <title>Apna Fast Food Corner</title>
   <link rel="stylesheet" href="style.css">
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
 <header>
-  <img src="images/logo.png" class="logo">
-  <h1>APNA FAST FOOD CORNER</h1>
-  <p>Fast Food & Chinese</p>
+  <h1>🍔 Apna Fast Food Corner</h1>
+  <p>Tasty & Affordable Fast Food</p>
 </header>
 
-<section class="banner">
-  <img src="images/banner.png" alt="Banner">
-</section>
+<nav>
+  <button onclick="filterFood('all')">All</button>
+  <button onclick="filterFood('momos')">Momos</button>
+  <button onclick="filterFood('noodles')">Noodles</button>
+  <button onclick="filterFood('burger')">Burger</button>
+  <button onclick="filterFood('snacks')">Snacks</button>
+</nav>
 
-<h2 class="title">🍔 Our Menu</h2>
+<section class="food-container">
 
-<section class="menu">
-
-  <div class="card">
-    <img src="images/burger.png">
-    <h3>Burger</h3>
-    <p>Veg ₹20 | Paneer ₹25 | Cheese ₹35</p>
-    <button onclick="order('Burger')">Order Now</button>
-  </div>
-
-  <div class="card">
-    <img src="images/maggie.png">
-    <h3>Maggie</h3>
-    <p>Veg ₹30/55 | Paneer ₹30/55 | Cheese ₹50/80</p>
-    <button onclick="order('Maggie')">Order Now</button>
-  </div>
-
-  <div class="card">
-    <img src="images/momos.png">
+  <!-- MOMOS -->
+  <div class="food-card momos">
+    <img src="images/momos.jpg">
     <h3>Momos</h3>
-    <p>Veg ₹10/20 | Paneer ₹15/30</p>
-    <button onclick="order('Momos')">Order Now</button>
+    <select class="variant">
+      <option value="10">Half ₹10</option>
+      <option value="20">Full ₹20</option>
+    </select>
+    <div class="qty">
+      <button onclick="changeQty(this,-1)">-</button>
+      <span>1</span>
+      <button onclick="changeQty(this,1)">+</button>
+    </div>
+    <button onclick="addToCart(this,'Momos')">Add to Cart</button>
   </div>
 
-  <div class="card">
-    <img src="images/chowmein.png">
+  <!-- CHOWMEIN -->
+  <div class="food-card noodles">
+    <img src="images/chowmein.jpg">
     <h3>Chowmein</h3>
-    <p>Half ₹15 | Full ₹25</p>
-    <button onclick="order('Chowmein')">Order Now</button>
+    <select class="variant">
+      <option value="10">Half ₹10</option>
+      <option value="20">Full ₹20</option>
+    </select>
+    <div class="qty">
+      <button onclick="changeQty(this,-1)">-</button>
+      <span>1</span>
+      <button onclick="changeQty(this,1)">+</button>
+    </div>
+    <button onclick="addToCart(this,'Chowmein')">Add to Cart</button>
+  </div>
+
+  <!-- BURGER -->
+  <div class="food-card burger">
+    <img src="images/burger.jpg">
+    <h3>Burger</h3>
+    <select class="variant">
+      <option value="20">Veg ₹20</option>
+      <option value="25">Paneer ₹25</option>
+    </select>
+    <div class="qty">
+      <button onclick="changeQty(this,-1)">-</button>
+      <span>1</span>
+      <button onclick="changeQty(this,1)">+</button>
+    </div>
+    <button onclick="addToCart(this,'Burger')">Add to Cart</button>
   </div>
 
 </section>
 
-<!-- QUIZ -->
-<div class="quiz-box">
-  <h3>🎁 Play & Win Discount</h3>
-  <p>Which item is most popular?</p>
-  <button onclick="quiz('wrong')">Pasta</button>
-  <button onclick="quiz('correct')">Momos</button>
-  <button onclick="quiz('wrong')">Burger</button>
-  <div id="quizResult"></div>
-</div>
-
-<!-- SPIN -->
-<div class="spin-box">
-  <h3>🎡 Lucky Spin</h3>
-  <button onclick="spin()">SPIN NOW</button>
-  <div id="spinResult"></div>
-</div>
-
-<!-- REVIEWS -->
-<div class="reviews">
-  <h3>⭐ Customer Reviews</h3>
-  <p>“Best momos in Hazratpur!”</p>
-  <p>“Affordable and tasty food.”</p>
-  <p>“Fast service & good quality.”</p>
-</div>
-
-<footer>
-  <p>📍 Hazratpur</p>
-  <p>📲 WhatsApp Order: 9368871417</p>
-  <p>© 2026 APNA FAST FOOD CORNER</p>
-</footer>
-
-<!-- JS -->
-<script src="script.js"></script>
-
-</body>
-</html>
-
+<!-- CART -->
+<div id="cart">
+  <h2>🛒 Cart</h2>
+  <ul id="cart-items"></ul>
+  <h3>Total: ₹<span id="total">0</span>
