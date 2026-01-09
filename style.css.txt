@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg,#8b0000,#ff1e1e);
+  color: white;
+}
+
+header {
+  text-align: center;
+  padding: 15px;
+  background: rgba(0,0,0,0.4);
+}
+
+.logo {
+  width: 100px;
+}
+
+.banner img {
+  width: 100%;
+  border-radius: 20px;
+  margin: 15px;
+}
+
+.title {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  color: black;
+  width: 260px;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+button {
+  background: #c62828;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.quiz-box, .spin-box, .reviews {
+  background: white;
+  color: black;
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+footer {
+  background: rgba(0,0,0,0.5);
+  padding: 15px;
+  text-align: center;
+}

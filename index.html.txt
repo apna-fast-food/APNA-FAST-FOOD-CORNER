@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>APNA FAST FOOD CORNER</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+  <img src="images/logo.png" class="logo">
+  <h1>APNA FAST FOOD CORNER</h1>
+  <p>Fast Food & Chinese</p>
+</header>
+
+<section class="banner">
+  <img src="images/banner.png">
+</section>
+
+<h2 class="title">🍔 Our Menu</h2>
+
+<section class="menu">
+
+  <div class="card">
+    <img src="images/burger.png">
+    <h3>Burger</h3>
+    <p>Veg ₹20 | Paneer ₹25 | Cheese ₹35</p>
+    <button onclick="order('Burger')">Order Now</button>
+  </div>
+
+  <div class="card">
+    <img src="images/maggie.png">
+    <h3>Maggie</h3>
+    <p>Veg ₹30/55 | Paneer ₹30/55 | Cheese ₹50/80</p>
+    <button onclick="order('Maggie')">Order Now</button>
+  </div>
+
+  <div class="card">
+    <img src="images/momos.png">
+    <h3>Momos</h3>
+    <p>Veg ₹10/20 | Paneer ₹15/30</p>
+    <button onclick="order('Momos')">Order Now</button>
+  </div>
+
+  <div class="card">
+    <img src="images/chowmein.png">
+    <h3>Chowmein</h3>
+    <p>Half ₹15 | Full ₹25</p>
+    <button onclick="order('Chowmein')">Order Now</button>
+  </div>
+
+</section>
+
+<!-- QUIZ -->
+<div class="quiz-box">
+  <h3>🎁 Play Quiz & Get Discount</h3>
+  <p>Which item is most ordered?</p>
+  <button onclick="quiz('wrong')">Pasta</button>
+  <button onclick="quiz('correct')">Momos</button>
+  <button onclick="quiz('wrong')">Burger</button>
+  <div id="quizResult"></div>
+</div>
+
+<!-- SPIN WHEEL -->
+<div class="spin-box">
+  <h3>🎡 Lucky Spin</h3>
+  <button onclick="spin()">SPIN NOW</button>
+  <div id="spinResult"></div>
+</div>
+
+<!-- REVIEWS -->
+<div class="reviews">
+  <h3>⭐ Customer Reviews</h3>
+  <p>“Best momos in area!” – Rahul</p>
+  <p>“Very tasty & fast service” – Neha</p>
+  <p>“Affordable & hygienic” – Aman</p>
+</div>
+
+<footer>
+  <p>📍 Hazratpur</p>
+  <p>📞 WhatsApp: 9368871417</p>
+  <p>© 2026 APNA FAST FOOD CORNER</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
