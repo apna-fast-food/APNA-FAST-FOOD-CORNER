@@ -1,78 +1,104 @@
+/* Body & Font */
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #8b0000, #ff2e2e);
-  color: white;
+  background: #fff8f0;
+  transition: background 0.5s;
 }
 
+/* Header */
 header {
-  text-align: center;
+  background: linear-gradient(90deg, #ff4d00, #ff9800);
+  color: white;
   padding: 15px;
-  background: rgba(0,0,0,0.4);
-}
-
-.logo {
-  width: 100px;
-}
-
-.banner img {
-  width: 100%;
-  border-radius: 20px;
-  margin: 15px;
-}
-
-.title {
   text-align: center;
-  margin: 30px 0 10px;
 }
 
-.menu {
+header input {
+  padding: 7px;
+  width: 60%;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+/* Navigation Buttons */
+nav {
+  text-align: center;
+  padding: 10px;
+}
+
+nav button {
+  margin: 5px;
+  padding: 8px 15px;
+  border: none;
+  background: #ff9800;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+nav button:hover {
+  transform: scale(1.1);
+}
+
+/* Food Cards Container */
+.food-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.card {
+/* Individual Food Cards */
+.food-card {
   background: white;
-  color: black;
-  width: 260px;
-  margin: 15px;
-  padding: 15px;
-  border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
-  transition: transform 0.3s;
-}
-
-.card:hover {
-  transform: scale(1.05);
-}
-
-.card img {
-  width: 100%;
-  border-radius: 12px;
-}
-
-.card button {
-  background: #c62828;
-  color: white;
-  border: none;
+  width: 220px;
+  margin: 10px;
   padding: 10px;
   border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.food-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ff9800;
+}
+
+/* Food Images */
+.food-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Quantity Controls */
+.qty {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+
+.qty button {
+  width: 30px;
   cursor: pointer;
 }
 
-.quiz-box, .spin-box, .reviews {
-  background: white;
-  color: black;
-  max-width: 420px;
-  margin: 30px auto;
-  padding: 20px;
-  border-radius: 20px;
-  text-align: center;
+/* Cart Section */
+#cart {
+  background: #fff3e0;
+  padding: 15px;
+  margin: 20px;
+  border-radius: 10px;
 }
 
-footer {
-  background: rgba(0,0,0,0.5);
-  padding: 15px;
-  text-align: center;
+#cart li {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+#cart li:hover {
+  color: red;
 }
