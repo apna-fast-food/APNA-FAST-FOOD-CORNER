@@ -10,6 +10,7 @@
 <header>
   <h1>🍔 Apna Fast Food Corner</h1>
   <p>Tasty & Affordable Fast Food</p>
+  <input type="text" id="search" placeholder="Search food..." onkeyup="searchFood()">
 </header>
 
 <nav>
@@ -24,9 +25,10 @@
 
   <!-- MOMOS -->
   <div class="food-card momos">
-    <img src="images/momos.jpg">
+    <img src="images/momos.jpg" alt="Momos">
     <h3>Momos</h3>
     <select class="variant">
+      <option value="">Select</option>
       <option value="10">Half ₹10</option>
       <option value="20">Full ₹20</option>
     </select>
@@ -40,9 +42,10 @@
 
   <!-- CHOWMEIN -->
   <div class="food-card noodles">
-    <img src="images/chowmein.jpg">
+    <img src="images/chowmein.jpg" alt="Chowmein">
     <h3>Chowmein</h3>
     <select class="variant">
+      <option value="">Select</option>
       <option value="10">Half ₹10</option>
       <option value="20">Full ₹20</option>
     </select>
@@ -56,11 +59,13 @@
 
   <!-- BURGER -->
   <div class="food-card burger">
-    <img src="images/burger.jpg">
+    <img src="images/burger.jpg" alt="Burger">
     <h3>Burger</h3>
     <select class="variant">
+      <option value="">Select</option>
       <option value="20">Veg ₹20</option>
       <option value="25">Paneer ₹25</option>
+      <option value="35">Cheese ₹35</option>
     </select>
     <div class="qty">
       <button onclick="changeQty(this,-1)">-</button>
@@ -76,4 +81,10 @@
 <div id="cart">
   <h2>🛒 Cart</h2>
   <ul id="cart-items"></ul>
-  <h3>Total: ₹<span id="total">0</span>
+  <h3>Total: ₹<span id="total">0</span></h3>
+  <button onclick="checkout()">Order on WhatsApp</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
